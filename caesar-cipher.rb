@@ -12,7 +12,7 @@ def caesar_cipher(string, num)
         end
         idx
     end
-    arr = string.split("")
+    arr = string.split("") # Strings not being iterable unless split into an array first makes me angry
     new_arr = []
     for letter in arr
         if letters_lower.include?(letter)
@@ -25,7 +25,7 @@ def caesar_cipher(string, num)
     end
     new_string = new_arr.join
     puts new_string
-    return new_string
+    return new_string # Just in case I wanted to do something else with it. You never know.
 end
 
 caesar_cipher("What a string!", 5)
